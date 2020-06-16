@@ -4,6 +4,16 @@ const carrinho = [
     '{"nome": "Kit de Lapis", "preco": 41.22}',
     '{"nome": "Caneta", "preco": 7.50}'
 ]
+
+// metodo mais simples
+const paraObj = (jason) => {return JSON.parse(jason)}
+const pegaPreco = (prod) => {return prod.preco}
+const myArrayObj = carrinho.map(paraObj)
+console.log(myArrayObj)
+const myPreco = myArrayObj.map(pegaPreco)
+console.log(myPreco)
+
+// metodo funcional implementado por mim
 function divElemento (a) {
     let vet00 = []
     let vet01 = []
